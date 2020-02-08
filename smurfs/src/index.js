@@ -5,6 +5,7 @@ import App from "./components/App";
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
+import { smurfReducer as reducer } from "./reducers/smurfReducer";
 
 const store = createStore(reducer,applyMiddleware(thunk));
 

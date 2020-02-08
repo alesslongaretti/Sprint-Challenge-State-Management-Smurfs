@@ -23,10 +23,27 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+Sometimes using props can become cumbersome, especially when props are needed in a lot of components. With context  api you don’t have that problem because you don’t have to prop drill
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Actions send data from the application to the store.
+Reducers describe how the applications state changes in response to the data actions sent to the store.
+Store has the state tree of the application, it changes the state when you dispatch an action.
+Because the store  holds the state of the entire application in an object tree.
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state is global that all components can access. Component state is only within that component and its passed down to children via props. When you are dealing with a big application it is better to use application state as it is easier to manage state. 
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux Thunk is a middleware that has the ability to handle asynchronous operations in action creators. It changes the action-creators to make asynchronous API calls.
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+As of now I don’t have a favorite state management system in this sprint. I found redux to be very challenging and I am still getting used to using it. 
 
 ## Project Set Up
 
