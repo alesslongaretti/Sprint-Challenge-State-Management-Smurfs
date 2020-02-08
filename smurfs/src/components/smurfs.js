@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import { getData, sendData } from "../actions/index";
 import Form from "../components/smurfForm";
+import Smurf from "../components/smurf";
 
 const Smurfs = props => {
   const getSmurfs = props.getData;
@@ -13,13 +14,7 @@ const Smurfs = props => {
   return (
     <div>
       {props.smurfs.map(smurfs => {
-        return (
-          <div key={smurfs.id}>
-            <p>name:{smurfs.name}</p>
-            <p>age:{smurfs.age}</p>
-            <p>height:{smurfs.height}</p>
-          </div>
-        );
+        return <Smurf smurfs={smurfs} key={smurfs.id} />;
       })}
 
       <Form sendData={props.sendData} />
@@ -33,6 +28,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, 
-    { getData, sendData })
-    (Smurfs);
+export default connect(mapStateToProps, { getData, sendData })(Smurfs);
